@@ -1,10 +1,13 @@
 require("dotenv").config();
 const express = require('express');
 
+const argumentos = require('./yargs');
+const PORT = argumentos.port;
+
 const connectDB = require('./database');
 connectDB();
 const app = express();
-const PORT = process.env.PORT || 8080;
+
 
 //Inicio servidor le paso app para sockets
 const { Server: HttpServer } = require('http');
