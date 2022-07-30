@@ -3,6 +3,6 @@ const router = express.Router();
 const { randoms } = require('../controllers/randomsController');
 
 
-router.get('/', randoms);
+router.get('/:cantidad?', randoms);
 
 module.exports = router;
